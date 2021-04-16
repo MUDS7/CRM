@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="crm">
+     <environment id="crm">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/crm?serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="mysql"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="com/bjpowernode/crm/settings/dao/UserDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/ActivityDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/ActivityRemarkDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/ClueActivityRelationDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/ClueDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/ClueRemarkDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/ContactsActivityRelationDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/ContactsDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/ContactsRemarkDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/CustomerDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/CustomerRemarkDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/TranDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/workbench/dao/TranHistoryDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/settings/dao/DicTypeDao.xml"/>
+        <mapper resource="com/bjpowernode/crm/settings/dao/DicValueDao.xml"/>
+    </mappers>
+</configuration>
